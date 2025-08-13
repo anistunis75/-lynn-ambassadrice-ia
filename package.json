@@ -1,0 +1,13 @@
+{
+  "name": "lynn-ambassadrice-ia",
+  "version": "1.0.0",
+  "description": "Application pour l'assistant IA Lynn et l'outil stratégique Admin.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "@google/genai": "^0.12.0"
+  }
+}

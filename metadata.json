@@ -1,0 +1,8 @@
+{
+  "build": {
+    "runtime": "nodejs20",
+    "install": "npm install",
+    "run": "npm start"
+  },
+  "memory": "512Mi"
+}

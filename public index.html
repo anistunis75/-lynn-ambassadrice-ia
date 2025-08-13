@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lynn | Ambassadrice IA</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <button id="tab-lynn" role="tab" aria-selected="true">Lynn (Ambassadrice)</button>
+            <button id="tab-admin" role="tab" aria-selected="false">Admin (Stratège)</button>
+        </nav>
+    </header>
+
+    <main>
+        <div id="panel-lynn" class="panel active">
+            <div class="chat-header">
+                <h1>Lynn | Votre Ambassadrice</h1>
+                <button id="clear-chat-button" title="Effacer le chat">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12h12V7z"/></svg>
+                </button>
+            </div>
+            <div id="chat-container"></div>
+            <form id="chat-form">
+                <input type="text" id="chat-input" placeholder="Écrivez votre message..." autocomplete="off" required>
+                <button type="submit" id="send-button" title="Envoyer">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                </button>
+            </form>
+        </div>
+
+        <div id="panel-admin" class="panel">
+             <div class="admin-container">
+                <div class="admin-form">
+                    <h2>Admin | Module d'Intelligence Concurrentielle</h2>
+                    <p><strong>Étape 1:</strong> Allez sur la page d'un concurrent que vous souhaitez analyser.</p>
+                    <p><strong>Étape 2:</strong> Sélectionnez et copiez l'intégralité du contenu textuel de la page.</p>
+                    <p><strong>Étape 3:</strong> Collez ce contenu ci-dessous, indiquez votre sujet cible, et lancez l'analyse.</p>
+                    <label for="competitor-content">Contenu de la page concurrente</label>
+                    <textarea id="competitor-content" rows="10"></textarea>
+                    <label for="subject-input">Votre sujet / mot-clé cible</label>
+                    <input type="text" id="subject-input">
+                    <button id="analysis-button">Lancer l'Analyse Stratégique</button>
+                </div>
+                <div class="admin-results">
+                    <h2>Rapport d'Analyse</h2>
+                    <div id="analysis-output"><p>Le rapport stratégique s'affichera ici.</p></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
